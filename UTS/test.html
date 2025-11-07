@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marble Nocits</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script type="text/JavaScript"src="js/atur1.js"></script>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: white;
+    }
+    .navbar, footer {
+      background-color: #111;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #2c2c2c;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      border-color: #007bff;
+    }
+    .search-box input {
+      background-color: #1a1a1a;
+      border: none;
+      color: white;
+    }
+    .search-box input::placeholder {
+      color: #888;
+    }
+    .btn-buy {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn-buy:hover {
+      background-color: #3399ff;
+      transform: scale(1.05);
+    }
+    /* Deskripsi Box */
+    .description-box {
+      background-color: #1f1f1f;
+      border-left: 5px solid #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 30px;
+      color: #e6e6e6;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .description-box h4 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .description-box p {
+      color: #cccccc;
+      margin: 0;
+    }
+
+
+
+    h2 {
+      text-align: center;
+      color: #125d8a;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #251818;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #125d8a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #0b4f70;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+    }
+
+    .success {
+      color: green;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark px-4">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="asset/noctis.png" alt="Logo" width="35" class="me-2">
+      Marble Noctis
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto ms-3">
+        <li class="nav-item"><a class="nav-link active" href="#">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="review.html">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="promo.html">Promo</a></li>
+        <li class="nav-item"><a class="nav-link" href="datacus.html">From</a></li>
+      </ul>
+      <button class="btn btn-outline-light btn-sm">Login</button>
+    </div>
+
+    <div class="d-none d-lg-block text-end ms-4">
+      <span class="me-3">525 <small class="text-secondary">SALES</small></span>
+      <span class="me-3">455 <small class="text-secondary">BUYERS</small></span>
+      <span>4.99 <small class="text-secondary">RATING</small></span>
+    </div>
+  </nav>
+
+  <!-- Deskripsi di atas Search -->
+  <div class="container">
+    <div class="description-box">
+      <h4>Selamat Datang di Marble Noctis</h4>
+      <p>
+        Platform terpercaya untuk mendapatkan berbagai produk digital premium dengan harga terbaik. 
+        Temukan beragam layanan unggulan, mulai dari tools keamanan, software produktivitas, 
+        hingga layanan eksklusif hanya di <strong>Marble Noctis</strong>. 
+        Aman, cepat, dan bergaransi kepuasan pengguna!
+      </p>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="container mt-4 search-box">
+    <input type="text" class="form-control py-2" placeholder="Search for products...">
+  </div>
+
+  <!-- Product Section -->
+  <div class="container my-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow-sm h-100">
+          <img src="asset/noctis.png" width="100" class="mx-auto my-3" alt="Kali Hub Logo">
+          <h5 class="fw-bold">Marble Noctis Premium</h5>
+          <p class="text-secondary mb-1">1 Products</p>
+          <p class="text-primary fw-semibold">IDR 199,856.54</p>
+          <button class="btn-buy mt-2">🛒 Beli Sekarang</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow-sm h-100">
+          <img src="asset/synaps.jpeg" width="100" class="mx-auto my-3" alt="Kali Hub Logo">
+          <h5 class="fw-bold">Synapse Executor Basic</h5>
+          <p class="text-secondary mb-1">1 Products</p>
+          <p class="text-primary fw-semibold">IDR IDR 75,000.00</p>
+          <button class="btn-buy mt-2">🛒 Beli Sekarang</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow-sm h-100">
+          <img src="asset/radiuz.png" width="100" class="mx-auto my-3" alt="Kali Hub Logo">
+          <h5 class="fw-bold">Radiuz Ultimate</h5>
+          <p class="text-secondary mb-1">5 Products</p>
+          <p class="text-primary fw-semibold">IDR 350,000.00</p>
+          <button class="btn-buy mt-2">🛒 Beli Sekarang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Hubungi Kami</h2>
+  <form id="contactForm" onsubmit="return validateForm()">
+    <label for="nama">Nama Lengkap:</label>
+    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+    <span id="namaError" class="error"></span>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Masukkan email Anda">
+    <span id="emailError" class="error"></span>
+
+    <label for="pesan">Pesan:</label>
+    <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+
+    <button type="submit">Kirim Pesan</button>
+
+    <p id="successMsg" class="success"></p>
+  </form>
+
+  <script>
+    function validateForm() {
+      // Ambil elemen input
+      let nama = document.getElementById("nama").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let namaError = document.getElementById("namaError");
+      let emailError = document.getElementById("emailError");
+      let successMsg = document.getElementById("successMsg");
+
+      // Reset pesan error dan sukses
+      namaError.textContent = "";
+      emailError.textContent = "";
+      successMsg.textContent = "";
+
+      let valid = true;
+
+      // Validasi Nama
+      if (nama === "") {
+        namaError.textContent = "Nama wajib diisi!";
+        valid = false;
+      }
+
+      // Validasi Email
+      if (email === "") {
+        emailError.textContent = "Email wajib diisi!";
+        valid = false;
+      } else if (!email.includes("@") || !email.includes(".")) {
+        emailError.textContent = "Format email tidak valid!";
+        valid = false;
+      }
+
+      // Jika semua valid
+      if (valid) {
+        successMsg.textContent = "Terima kasih! Pesan Anda berhasil dikirim.";
+        document.getElementById("contactForm").reset();
+      }
+
+      return false; // mencegah form dikirim (karena ini contoh)
+    }
+  </script>
+
+
+  <!-- Footer -->
+  <footer class="text-center py-3 mt-5 border-top border-secondary">
+    <p class="mb-1 fw-bold">Marble Noctis</p>
+    <p class="text-secondary mb-0">Copyright © Marble Noctis 2025</p>
+    <div class="mt-2">
+      <a href="#" class="text-secondary mx-2 small text-decoration-none">Terms of Service</a>
+      <a href="#" class="text-secondary mx-2 small text-decoration-none">Privacy Policy</a>
+      <a href="#" class="text-secondary mx-2 small text-decoration-none">Refund Policy</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
